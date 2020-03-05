@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Hg-X6-AH9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User ListVC-->
+        <scene sceneID="gQj-0A-cQT">
+            <objects>
+                <viewController storyboardIdentifier="UserListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Hg-X6-AH9" customClass="UserListVC" customModule="HW_Access" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n66-iG-ph5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zdz-mZ-JlL">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="tintColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-s8-kUh">
+                                <rect key="frame" x="20" y="161" width="374" height="701"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="4kG-3y-xR8"/>
+                                    <constraint firstAttribute="height" constant="701" id="zlL-uB-EUW"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Hg-X6-AH9" id="QbI-sQ-Heo"/>
+                                    <outlet property="delegate" destination="7Hg-X6-AH9" id="InF-5i-WXo"/>
+                                </connections>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KY-gJ-iA0">
+                                <rect key="frame" x="129.5" y="84" width="155" height="46"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="39"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Mk-o8-J5b" firstAttribute="bottom" secondItem="bBf-s8-kUh" secondAttribute="bottom" id="E8m-xP-1A2"/>
+                            <constraint firstItem="zdz-mZ-JlL" firstAttribute="centerX" secondItem="6Mk-o8-J5b" secondAttribute="centerX" id="Oek-EL-eZG"/>
+                            <constraint firstItem="zdz-mZ-JlL" firstAttribute="centerY" secondItem="6Mk-o8-J5b" secondAttribute="centerY" id="XwM-lp-qPx"/>
+                            <constraint firstItem="3KY-gJ-iA0" firstAttribute="centerX" secondItem="6Mk-o8-J5b" secondAttribute="centerX" id="aRR-hd-AM7"/>
+                            <constraint firstItem="3KY-gJ-iA0" firstAttribute="top" secondItem="6Mk-o8-J5b" secondAttribute="top" constant="40" id="amw-Qr-4Ff"/>
+                            <constraint firstItem="bBf-s8-kUh" firstAttribute="centerX" secondItem="6Mk-o8-J5b" secondAttribute="centerX" id="ynh-iv-yc3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Mk-o8-J5b"/>
+                    </view>
+                    <connections>
+                        <outlet property="loading" destination="zdz-mZ-JlL" id="3YL-Ve-siD"/>
+                        <outlet property="tableView" destination="bBf-s8-kUh" id="oZT-kx-3f7"/>
+                        <outlet property="userList" destination="3KY-gJ-iA0" id="C45-bg-UYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFd-0H-DVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
